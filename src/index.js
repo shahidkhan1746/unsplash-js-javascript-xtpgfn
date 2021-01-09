@@ -31,7 +31,7 @@ const Body = () => {
 
   useEffect(() => {
     api.search
-      .getPhotos({ query: "random", orientation: "landscape" })
+      .getPhotos({ query: "random", orientation: "landscape", count: "30" })
       .then(result => {
         setPhotosResponse(result);
       })
