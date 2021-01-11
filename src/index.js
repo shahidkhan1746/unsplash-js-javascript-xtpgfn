@@ -2,6 +2,9 @@ import ReactDOM from "react-dom";
 import React, { Fragment, useEffect, useState } from "react";
 import "./style.css";
 import { createApi } from "unsplash-js";
+import App from "./App.jsx";
+
+ReactDOM.render(<App />, document.getElementById("app"));
 
 const api = createApi({
   // Don't forget to set your access token here!
