@@ -4,8 +4,6 @@ import "./style.css";
 import { createApi } from "unsplash-js";
 import App from "./App.jsx";
 
-ReactDOM.render(<App />, document.getElementById("app"));
-
 const api = createApi({
   // Don't forget to set your access token here!
   // See https://unsplash.com/developers
@@ -67,6 +65,13 @@ const Body = () => {
   }
 };
 
+const App = () => {
+  return (
+    <main className="app">
+      <Body />
+    </main>
+  );
+};
 const Home = () => {
   return (
     <main className="root">
@@ -74,5 +79,5 @@ const Home = () => {
     </main>
   );
 };
-
+ReactDOM.render(<App />, document.getElementById("app"));
 ReactDOM.render(<Home />, document.getElementById("root"));
